@@ -8,9 +8,10 @@ I'm Davis McMurrain. I run [OperatorOS](https://operatoros.ai), an AI systems ag
 
 - **[guides/](guides/)** Build guides and playbooks from the posts. Full write-ups, install commands, honest limitations.
 - **[skills/](skills/)** Claude Code skills I actually run. Drop a folder into `~/.claude/skills/` and it works.
-- **[dashboards/](dashboards/)** Dashboard builds. Mission controls for agents, ops views, template to live URL.
-- **[ai-os/](ai-os/)** The AI operating system builds. Memory, agents, email, calendar. The version that does real work, not a demo.
-- **[stacks/](stacks/)** Self-hosted stack blueprints. n8n, Supabase, a VPS. The software that runs actual businesses.
+- **[ai-os/](ai-os/)** The AI operating system I actually run. Architecture, the agent-maintained vault, Claude Code as an operating layer, and how to build your own.
+- **[dashboards/](dashboards/)** Dashboard builds. The mission control build path from a free shadcn template to a live URL, and the patterns behind a production agent dashboard.
+- **[stacks/](stacks/)** The self-hosted stack. One VPS, Docker, n8n, Supabase, the deploy pattern, and the hardening checklist.
+- **[resources/](resources/)** The open source tools I actually use or properly evaluated, with verdicts. Including the rejections, which carry most of the decision value.
 
 ## How this grows
 
