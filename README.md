@@ -8,7 +8,7 @@
 <p align="center">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="assets/wordmark-dark.png">
-    <img src="assets/wordmark-light.png" alt="OPERATOROS" width="720">
+    <img src="assets/wordmark-light.png" alt="OperatorOS wordmark" width="720">
   </picture>
 </p>
 
