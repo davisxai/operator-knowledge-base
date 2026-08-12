@@ -1,0 +1,7 @@
+# GitBook Git Sync config. The repo is the source of truth: pages are written
+# here and synced out, never authored in the GitBook editor.
+root: ./
+
+structure:
+  readme: ./README.md
+  summary: ./SUMMARY.md
