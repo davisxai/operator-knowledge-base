@@ -8,5 +8,6 @@ These originally shipped as gated lead magnets on Instagram. Here they're free, 
 
 - **[claude-code-skills-starter-kit/](claude-code-skills-starter-kit/)** What Claude Code skills are, how they work, and five production-tested skills you can install in under a minute.
 - **[claude-agents-guide/](claude-agents-guide/)** The mental model for agents, three working SKILL.md files, subagent patterns, the MCP servers to install first, and where it all breaks in production.
+- **[jev-setup-and-patterns/](jev-setup-and-patterns/)** TypeSafe's Jev from account to production: install in Python and JavaScript, the three question types, confidence thresholds, five runnable pattern scripts, and the documented list of where it breaks.
 
 More land as posts ship. Follow [@daviss.dev](https://instagram.com/daviss.dev) to catch them first.
