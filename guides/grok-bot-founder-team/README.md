@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="The founder team: you, Atlas as Chief of Staff, and seven specialists: Sonar, Ghost, Tracer, Sentinel, Rainmaker, Anvil, Prism" width="100%">
+</p>
+
 # Grok Bot Founder Team
 
 > Follow [@daviss.dev](https://instagram.com/daviss.dev) and [@os.operator](https://instagram.com/os.operator) on Instagram for more guides like this.
