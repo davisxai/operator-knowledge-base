@@ -1,0 +1,4 @@
+task_id,project,title,owner_bot,status,blocked_reason,input_path,output_path,needed_by,created,updated
+T-001,example-launch,Write the weekly competitor read,Sonar,Done,,/workspace/sonar/competitors.md,/workspace/sonar/reads/2026-09-29.md,2026-09-29,2026-09-29,2026-09-29
+T-002,example-launch,Draft launch email in founder voice,Ghost,Ready for Review,,/workspace/sonar/reads/2026-09-29.md,/workspace/atlas/queue/2026-09-30-launch-email.md,2026-10-01,2026-09-29,2026-09-30
+T-003,example-launch,Build prospect batch for launch segment,Tracer,Blocked,ICP file missing the disqualifier list,/workspace/tracer/icp.md,/workspace/tracer/batches/2026-09-30.md,2026-10-01,2026-09-29,2026-09-30

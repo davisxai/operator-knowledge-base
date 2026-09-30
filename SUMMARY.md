@@ -29,6 +29,7 @@
 * [Claude agents guide](guides/claude-agents-guide/README.md)
 * [Claude Code skills starter kit](guides/claude-code-skills-starter-kit/README.md)
 * [Jev setup and five patterns](guides/jev-setup-and-patterns/README.md)
+* [Grok Bot founder team](guides/grok-bot-founder-team/README.md)
 
 ## Skills
 
