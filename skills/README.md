@@ -31,6 +31,7 @@ No restart needed. Invoke with `/skill-name`.
 - **[recurring-report/](recurring-report/)** Fixed-shape status report from your real systems, built for scheduled runs.
 - **[swarm/](swarm/)** Decompose a task into 2-6 parallel subagents with wave structure and complete agent files.
 - **[system-design/](system-design/)** Any system into a buildable architecture: pipeline, tools, volume math, cost stack, decision list.
+- **[vault-ingest/](vault-ingest/)** Run your agent-maintained vault's ingest operation from any project. The write path behind the auto-capture rule.
 
 ## The standard these follow
 

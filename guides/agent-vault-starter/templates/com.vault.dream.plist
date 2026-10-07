@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Nightly vault consolidation (the dream pass), Mac launchd job.
+  Runs the /dream skill in the vault with Claude Code at 03:00 local.
+
+  Before loading:
+    1. Replace /ABSOLUTE/PATH/TO/vault (two places).
+    2. Confirm the PATH includes your claude binary: run `which claude`.
+    3. Test once by hand from the vault folder: claude -p "/dream"
+  Then:
+    cp com.vault.dream.plist ~/Library/LaunchAgents/
+    launchctl load ~/Library/LaunchAgents/com.vault.dream.plist
+  launchd only fires while the Mac is awake. The skill is gated and idempotent,
+  so a missed night is consolidated by the next run.
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.vault.dream</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>-lc</string>
+    <string>cd /ABSOLUTE/PATH/TO/vault && claude -p "/dream"</string>
+  </array>
+
+  <key>WorkingDirectory</key>
+  <string>/ABSOLUTE/PATH/TO/vault</string>
+
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PATH</key>
+    <string>/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin</string>
+  </dict>
+
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>3</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+
+  <key>StandardOutPath</key>
+  <string>/tmp/vault-dream.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/tmp/vault-dream.err.log</string>
+
+  <key>RunAtLoad</key>
+  <false/>
+</dict>
+</plist>
