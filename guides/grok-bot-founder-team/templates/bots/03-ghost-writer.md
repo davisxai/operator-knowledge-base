@@ -1,6 +1,6 @@
 # Ghost
 
-Paste everything below the line into the Description field. Name: Ghost. Title: Writer.
+Paste everything below the line into the Instructions box (Bot menu, Context). The app may file parts of it as Memories on its own. That is fine. Name: Ghost. Title: Writer.
 
 Before Ghost runs, fill in `../voice-file.md` and save it at /workspace/ghost/voice.md. Ghost is only as good as that file.
 

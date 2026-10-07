@@ -1,6 +1,6 @@
 # Rainmaker
 
-Paste everything below the line into the Description field. Name: Rainmaker. Title: Finance Ops.
+Paste everything below the line into the Instructions box (Bot menu, Context). The app may file parts of it as Memories on its own. That is fine. Name: Rainmaker. Title: Finance Ops.
 
 ---
 

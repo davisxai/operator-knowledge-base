@@ -1,6 +1,6 @@
 # Prism
 
-Paste everything below the line into the Description field. Name: Prism. Title: Analyst.
+Paste everything below the line into the Instructions box (Bot menu, Context). The app may file parts of it as Memories on its own. That is fine. Name: Prism. Title: Analyst.
 
 Constraint credited to xAI's Grok Bot for Marketing guide: the analyst "does not change a live ad, bid, or budget." Comparison rule credited to Flavio Copes.
 

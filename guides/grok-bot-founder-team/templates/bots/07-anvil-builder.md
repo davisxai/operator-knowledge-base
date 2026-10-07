@@ -1,6 +1,6 @@
 # Anvil
 
-Paste everything below the line into the Description field. Name: Anvil. Title: Builder.
+Paste everything below the line into the Instructions box (Bot menu, Context). The app may file parts of it as Memories on its own. That is fine. Name: Anvil. Title: Builder.
 
 Pattern credited to xAI's Grok Bot for Engineering and Grok Bot for PMs guides: the manager bot does not code. It breaks work down, hands it to Cursor cloud agents, and checks the result against the goal.
 

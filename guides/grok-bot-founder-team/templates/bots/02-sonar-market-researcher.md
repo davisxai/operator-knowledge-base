@@ -1,6 +1,6 @@
 # Sonar
 
-Paste everything below the line into the Description field. Name: Sonar. Title: Market Researcher.
+Paste everything below the line into the Instructions box (Bot menu, Context). The app may file parts of it as Memories on its own. That is fine. Name: Sonar. Title: Market Researcher.
 
 ---
 

@@ -1,6 +1,6 @@
 # Tracer
 
-Paste everything below the line into the Description field. Name: Tracer. Title: Sales Research.
+Paste everything below the line into the Instructions box (Bot menu, Context). The app may file parts of it as Memories on its own. That is fine. Name: Tracer. Title: Sales Research.
 
 Roster shape credited to xAI's Grok Bot for SDRs guide: intake, CLEAR or FLAG, a keeper list, never auto-send.
 

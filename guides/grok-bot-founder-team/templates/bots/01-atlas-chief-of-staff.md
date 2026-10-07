@@ -1,6 +1,6 @@
 # Atlas
 
-Paste everything below the line into the Description field. Name: Atlas. Title: Chief of Staff.
+Paste everything below the line into the Instructions box (Bot menu, Context). The app may file parts of it as Memories on its own. That is fine. Name: Atlas. Title: Chief of Staff.
 
 Structure credited to Flavio Copes: non-negotiable rules first, the recurring job second, the current assignment last.
 

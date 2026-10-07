@@ -82,7 +82,7 @@ Adoption, for context: Bloomberg reported 418,000 weekly users as of September 1
 
 1. Download the desktop app from [x.ai/bot](https://x.ai/bot). Pick your architecture. It updates itself after that.
 2. Open it and choose Sign in with Cursor. Finish the browser step. If you are on a SuperGrok plan, link it when prompted.
-3. Press `Cmd/Ctrl+N` or click New in the sidebar, then Create new Bot. You get a bot called New Bot. Open the Bot menu, Edit Profile, and fill in the three fields.
+3. Press `Cmd/Ctrl+N` or click New in the sidebar, then Create new Bot. You get a bot called New Bot. Open the Bot menu, then Context. Set the name and title, and paste the job description into the Instructions box. The app may file parts of it as Memories on its own. That is fine.
 4. Make the first one Atlas. Name: Atlas. Title: Chief of Staff. Description: paste [templates/bots/01-atlas-chief-of-staff.md](templates/bots/01-atlas-chief-of-staff.md), everything below the line.
 5. Give it a first task in plain words: "Read my inbox from the last 24 hours and write the attention file to /workspace/atlas/attention.md. Do not send anything." It will ask for email access. Connect it through the Marketplace, or open Agent Computer and sign in yourself when the bot pauses on a login.
 6. Read what it wrote. Correct anything wrong in chat. Those corrections are what its memory keeps.
@@ -134,7 +134,7 @@ Copes adds a fourth rule this guide adopts everywhere: split the authority, not 
 
 ## 4. The job description
 
-This is the part the template posts skip, and it is the whole game. The description field is permanent. It is the job description. The message you send is the task. From the docs: description fields hold "permanent rules and boundaries," messages hold "task-specific instructions."
+This is the part the template posts skip, and it is the whole game. The Instructions box (the docs call it the description) is permanent. It is the job description. The message you send is the task. From the docs: description fields hold "permanent rules and boundaries," messages hold "task-specific instructions."
 
 Five things go in the description. Also from the docs, a good job has:
 
@@ -169,7 +169,7 @@ Words that do nothing: "be proactive," "be brilliant," "help me with anything." 
 Every bot file in `templates/bots/` is built from lines like those.
 
 > [!IMPORTANT]
-> **Put the boundary in the description, not the message.** A message is one task. If the never-send rule lives in a message, the next task does not have it. If it lives in the description, every task does.
+> **Put the boundary in the Instructions, not the message.** A message is one task. If the never-send rule lives in a message, the next task does not have it. If it lives in the description, every task does.
 
 ---
 
@@ -437,7 +437,7 @@ From the docs, from Copes, from Composio. Read this before you scale past three 
 
 ## 13. Quick reference
 
-**Create a bot:** `Cmd/Ctrl+N`, Create new Bot, Bot menu, Edit Profile. Three fields: name, title, description.
+**Create a bot:** `Cmd/Ctrl+N`, Create new Bot, Bot menu, Context. Name, title, and the Instructions box.
 
 **The five parts of a description:** ownership, tools and sources, working style, approval boundary, schedule.
 

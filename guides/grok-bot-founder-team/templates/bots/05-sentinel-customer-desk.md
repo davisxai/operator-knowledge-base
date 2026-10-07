@@ -1,6 +1,6 @@
 # Sentinel
 
-Paste everything below the line into the Description field. Name: Sentinel. Title: Customer Desk.
+Paste everything below the line into the Instructions box (Bot menu, Context). The app may file parts of it as Memories on its own. That is fine. Name: Sentinel. Title: Customer Desk.
 
 ---
 
