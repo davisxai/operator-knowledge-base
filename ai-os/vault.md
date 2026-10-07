@@ -6,6 +6,8 @@ This is the knowledge layer the rest of the system reads from. The chat agent an
 
 Design and contract only. No note contents.
 
+Where the rest lives: the nightly consolidation loop that writes back into the vault is in [architecture.md, section 6](architecture.md#6-the-nightly-consolidation-loop). The capture rule every Claude Code session carries is in [claude-code-layer.md](claude-code-layer.md). The build order is in [build-your-own.md](build-your-own.md).
+
 ---
 
 ## 1. The core idea
@@ -19,6 +21,10 @@ Three layers, split by **mutability** rather than by topic:
 - **Immutable raw.** `sources/YYYY/`. Transcripts, articles, emails, documents. Agents read them. They never edit or delete them.
 - **Agent-owned synthesis.** `wiki/`. People, companies, concepts, decisions, maps of content.
 - **Mutable business state.** `ops/`. Clients, pipeline, projects. Has a lifecycle and terminal states.
+
+<p align="center">
+  <img src="assets/vault-layers.png" alt="Three layers: raw sources on top, the agent-owned wiki in the middle, live business state at the bottom" width="100%">
+</p>
 
 > [!TIP]
 > Folders route by type and mutability. Topic lives in links and properties. There is no `clients/marketing/` tree to maintain, because a page's subject is expressed through wikilinks, frontmatter, and tags. The same fact stays reachable from several angles without being filed twice.
@@ -41,6 +47,10 @@ archive/             closed projects and deals, moved whole at done or lost
 meta/                schema.md, templates/, bases/
 .claude/skills/      the four canonical operation definitions
 ```
+
+<p align="center">
+  <img src="assets/vault-layout.png" alt="Files flow into the vault and out into the folder tree: archive, daily, inbox, meta, ops, sources, wiki, plus CLAUDE, hot, index, and log at the root" width="100%">
+</p>
 
 Scale as of 2026-07-29, since honest numbers beat adjectives: roughly 76 person pages, 26 company pages, 26 concept pages, 6 maps of content, 1 decision page, 44 pending inbox captures, and 163 log lines since the vault was initialized on 2026-06-09.
 

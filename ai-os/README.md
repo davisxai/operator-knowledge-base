@@ -1,5 +1,9 @@
 # AI OS
 
+<p align="center">
+  <img src="assets/ai-os-banner.png" alt="Documents, emails, PDFs, and sheets flow into OperatorOS and out into a knowledge graph" width="100%">
+</p>
+
 The AI operating system I actually run. Not a rendered HTML page pretending to be Jarvis.
 
 This section documents the working version: what processes run, where state lives, which model does which job, what the agent is allowed to touch, and the parts that broke in production. It is written for someone who wants to build their own, so it stays at the level of design decisions and mechanisms rather than screenshots.
