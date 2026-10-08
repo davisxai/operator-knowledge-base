@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.png" alt="Ten layers stacked into one platform, design at the top and deploy at the bottom" width="100%">
+  <img src="assets/banner.png" alt="The Claude Code desktop app on the operatoros-agency repo, with the monthly token usage grid at 90 percent" width="100%">
 </p>
 
 # The Build Stack
