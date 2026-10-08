@@ -458,7 +458,7 @@ Edit `name` in `wrangler.jsonc` first. The dry run prints the bundle size. Then 
 **My pick: Jev, TypeSafe AI's System One model.** Three question types: Choice picks from a list of up to 255 options, Score grades against a rubric, Noul answers whether a statement is true. All three return a probability. TypeSafe states 70 to 500 ms per decision, $0.042 per million input tokens, and output free. Jev is in early access. The full install, the three question types, confidence thresholds, and five runnable pattern scripts are in [jev-setup-and-patterns](../jev-setup-and-patterns/). Single tool, no split.
 
 <p align="center">
-  <img src="assets/jev.png" alt="Jev, the language model that does not talk: typed judgments with probabilities instead of text" width="100%">
+  <img src="assets/jev.png" alt="Context, options, constraints, and a goal go into Jev. Probabilities, expected value, and risk come out as structured outputs" width="100%">
 </p>
 
 **Get started**
