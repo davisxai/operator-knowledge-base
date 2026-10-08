@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" alt="Ten layers stacked into one platform, design at the top and deploy at the bottom" width="100%">
+</p>
+
 # The Build Stack
 
 > Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@os.operator](https://instagram.com/os.operator) on Instagram for more guides like this.
@@ -168,7 +172,15 @@ Then type `/stack-map`. It reads config files and lockfiles only, never source, 
 
 **My pick: Claude Code.** My whole company runs through it. On October 8, 2026 my global Claude Code directory holds 50 skill folders and 11 agents, the agency repo adds 16 project skills, 9 hook rules block or warn on dangerous commands, and MCP servers connect it to three Gmail accounts, Slack, Cloudflare, and shadcn. Every guide in this repo was written and tested from a Claude Code session.
 
+<p align="center">
+  <img src="assets/claude-code.png" alt="A Claude Code session in the terminal with the skills picker open" width="100%">
+</p>
+
 **Reach for Codex when the work is a pile of separate tasks you want done at once.** Each task runs in its own cloud sandbox against the GitHub repo and comes back as a pull request to review. Claude Code builds with you in your environment. Codex takes delegated tasks away and brings back PRs. I document Codex from OpenAI's own pages. It is not in my daily stack.
+
+<p align="center">
+  <img src="assets/codex.png" alt="The Codex app with a diff open beside the chat" width="100%">
+</p>
 
 **Get started with Claude Code**
 
@@ -340,6 +352,10 @@ The Community Edition is free to self-host under n8n's Sustainable Use License, 
 
 **My pick: GitHub.** Every repo, including this one and the [open source dashboard](https://github.com/davisxai/operatoros). CI runs lint and typecheck as two parallel jobs on every push and pull request. It validates and never deploys. The workflow in [templates/ci.yml](templates/ci.yml) is the one from my production repos. Single tool, no split.
 
+<p align="center">
+  <img src="assets/github-flow.png" alt="Three developers pushing branches to one GitHub repo and pulling each other's changes" width="100%">
+</p>
+
 **Get started**
 
 ```bash
@@ -381,6 +397,10 @@ It expects `lint` and `typecheck` scripts in `package.json`. `create-next-app` g
 **The job.** Where the app goes live. One account holds the Worker that runs it, the DNS, object storage, a small SQL database, and the domain itself.
 
 **What I run.** My studio dashboard runs on Cloudflare Workers through the OpenNext adapter. Workers Builds watches the GitHub repo and builds and deploys every push to `main`. Cloudflare Access sits in front until the app has its own login. The two config files in `templates/` are the ones from that deploy with the app name swapped: [wrangler.jsonc](templates/wrangler.jsonc) and [open-next.config.ts](templates/open-next.config.ts). Versions on the day of writing: Next.js 16.3.8, `@opennextjs/cloudflare` 1.20.8, wrangler 4.147.0.
+
+<p align="center">
+  <img src="assets/cloudflare.png" alt="Users reaching an app through a global edge network, with code, files, and a database behind it" width="100%">
+</p>
 
 **Two ways onto Workers.** Cloudflare's docs now recommend vinext, a Vite plugin that reimplements the Next.js API, as the default for new Next.js apps on Workers. It is in beta. OpenNext is the path for an existing app, and the one I have in production. Pick by situation:
 
@@ -437,6 +457,10 @@ Edit `name` in `wrangler.jsonc` first. The dry run prints the bundle size. Then 
 
 **My pick: Jev, TypeSafe AI's System One model.** Three question types: Choice picks from a list of up to 255 options, Score grades against a rubric, Noul answers whether a statement is true. All three return a probability. TypeSafe states 70 to 500 ms per decision, $0.042 per million input tokens, and output free. Jev is in early access. The full install, the three question types, confidence thresholds, and five runnable pattern scripts are in [jev-setup-and-patterns](../jev-setup-and-patterns/). Single tool, no split.
 
+<p align="center">
+  <img src="assets/jev.png" alt="Jev, the language model that does not talk: typed judgments with probabilities instead of text" width="100%">
+</p>
+
 **Get started**
 
 1. Create an account at [typesafe.ai](https://typesafe.ai/) and a key at [console.typesafe.ai/keys](https://console.typesafe.ai/keys).
@@ -478,6 +502,10 @@ claude plugin install typesafe@typesafe-ai
 **The job.** Where the agent keeps what it learned.
 
 **My pick: Obsidian.** My company's memory is a folder of markdown. On October 8, 2026 the vault holds 303 markdown files. Agents write most of them, every page opens with frontmatter that a validator checks, and a consolidation agent runs over it nightly. Obsidian is the reader and the editor. The personal license is free without limits. The design in full is in [ai-os/vault.md](../../ai-os/vault.md), and a copy-and-run starter vault with the schema, the templates, and five Claude Code skills is in [agent-vault-starter](../agent-vault-starter/).
+
+<p align="center">
+  <img src="assets/memory.png" alt="Documents, emails, PDFs, and sheets flow into the agent and out into a knowledge graph" width="100%">
+</p>
 
 **Reach for Mem0 when the product has many users who each need their own memory.** A hosted memory API, scoped per `user_id`, that compresses chat history into facts the agent can search. One builder who reads the memory: markdown. Many users who never see it: an API. I document Mem0 from its own docs.
 
