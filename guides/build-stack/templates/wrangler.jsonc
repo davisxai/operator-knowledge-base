@@ -1,0 +1,28 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "my-app",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2026-09-01",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS",
+  },
+  "services": [
+    {
+      "binding": "WORKER_SELF_REFERENCE",
+      "service": "my-app",
+    },
+  ],
+  "images": {
+    "binding": "IMAGES",
+  },
+  // Runtime vars and secrets live in the Cloudflare dashboard, not here.
+  // keep_vars stops a deploy from wiping what was set there.
+  "keep_vars": true,
+  // esbuild minify on deploy. Smaller bundle, faster Worker startup. Cloudflare counts uncompressed size (64 MiB limit on every plan).
+  "minify": true,
+  "observability": {
+    "enabled": true,
+  },
+}

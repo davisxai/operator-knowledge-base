@@ -32,6 +32,7 @@ No restart needed. Invoke with `/skill-name`.
 - **[swarm/](swarm/)** Decompose a task into 2-6 parallel subagents with wave structure and complete agent files.
 - **[system-design/](system-design/)** Any system into a buildable architecture: pipeline, tools, volume math, cost stack, decision list.
 - **[vault-ingest/](vault-ingest/)** Run your agent-maintained vault's ingest operation from any project. The write path behind the auto-capture rule.
+- **[stack-map/](stack-map/)** Read any repo against the ten-layer build stack. Present, partial, or not detected per layer, with the file that proves it and the next command for each gap.
 
 ## The standard these follow
 
