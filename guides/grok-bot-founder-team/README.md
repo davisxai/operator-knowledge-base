@@ -19,10 +19,15 @@ It is not a review. Every claim about the product traces to xAI's docs or to a n
 ## What you'll get
 
 → The install, the sign-in, and your first bot in about fifteen minutes
+
 → The operating model every published Grok Bot team uses: one Chief of Staff, specialists for stable jobs, files for handoffs
+
 → The five things that go in a description field, and the three-section layout that keeps them straight
+
 → Eight paste-ready job descriptions: Atlas, Sonar, Ghost, Tracer, Sentinel, Rainmaker, Anvil, Prism
+
 → A voice file template, a handoff protocol, a routine text bank, and a set of auto-review rules
+
 → The build order, six worked workflows with the exact prompt, and the honest list of what fails
 
 ---

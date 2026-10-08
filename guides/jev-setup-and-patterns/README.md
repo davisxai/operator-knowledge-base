@@ -15,10 +15,15 @@ Every command here was run. Every number has a source at the bottom.
 ## What you'll get
 
 → Account, API key, SDK install in Python and JavaScript, and the Claude Code plugin
+
 → The three question types with the exact fields each one returns
+
 → A runnable quickstart in both languages, with the response explained line by line
+
 → Five pattern scripts: intent routing, confidence-gated routing, speculative fan-out, composite scoring, tool-call risk gating
+
 → A decision spec template so you write the criteria before you write the call
+
 → The honest list of what Jev is bad at, taken from TypeSafe's own docs
 
 ---

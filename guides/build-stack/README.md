@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.png" alt="The Claude Code desktop app on the operatoros-agency repo, with the monthly token usage grid at 90 percent" width="100%">
+  <img src="assets/banner-usage.png" alt="The Claude Code desktop app on the operatoros-agency repo, with the monthly token usage grid at 90 percent" width="100%">
 </p>
 
 # The Build Stack
@@ -19,10 +19,15 @@ Every command here was run on October 8, 2026. Every price and limit links to th
 ## What you'll get
 
 → Ten sections, one per layer, each with the pick, the alternative, the split between them, the exact setup, and the docs that matter
+
 → One script that scaffolds the first four layers into a fresh repo, tested on Next.js 16.4
+
 → A doctor script that checks your machine for every tool on the list and prints the install step for anything missing
+
 → A Claude Code skill, `/stack-map`, that reads any repo and reports which layers are present and which are not
+
 → The config files from my production deploy: `wrangler.jsonc`, `open-next.config.ts`, the CI workflow, the project `CLAUDE.md`, the env template
+
 → What each layer costs at the free tier and at the first paid tier, from the vendors' own pricing pages
 
 ---

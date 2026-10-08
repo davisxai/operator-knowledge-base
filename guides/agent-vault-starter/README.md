@@ -19,10 +19,15 @@ This guide ships the whole thing as files. Copy the starter vault, open it in Ob
 ## What you'll get
 
 → A complete starter vault you copy with one command: contract, schema, ten page templates, folder skeleton, index, hot file, log
+
 → Five vault operations as Claude Code skills: `/ingest`, `/query`, `/lint`, `/build`, `/dream`
+
 → The auto-capture rule that turns every Claude Code session on your machine into an ingestion event
+
 → The dream agent: a four-phase nightly consolidation pass, as a skill, as a standalone system prompt, and as a launchd job
+
 → A frontmatter validator that rejects any page failing the schema, no dependencies
+
 → Five worked workflows with the exact prompt, and a quick reference card
 
 ---
