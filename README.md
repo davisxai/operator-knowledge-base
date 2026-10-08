@@ -18,7 +18,7 @@
 
 <p align="center">
   <a href="https://operatoros.ai">operatoros.ai</a> ·
-  <a href="https://instagram.com/daviss.dev">@daviss.dev</a> ·
+  <a href="https://instagram.com/davis.mcm">@davis.mcm</a> ·
   <a href="https://instagram.com/os.operator">@os.operator</a>
 </p>
 

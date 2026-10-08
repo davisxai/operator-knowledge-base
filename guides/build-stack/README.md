@@ -1,6 +1,6 @@
 # The Build Stack
 
-> Follow [@daviss.dev](https://instagram.com/daviss.dev) and [@os.operator](https://instagram.com/os.operator) on Instagram for more guides like this.
+> Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@os.operator](https://instagram.com/os.operator) on Instagram for more guides like this.
 
 ---
 
@@ -127,11 +127,11 @@ Then type `/stack-map`. It reads config files and lockfiles only, never source, 
 
 ---
 
-## 3. 01 Design: Claude Design // Framer
+## 3. Design: Claude Design // Framer
 
 **The job.** The layout before the code. Slide systems, mockups, carousels, one-pagers, interactive prototypes.
 
-**My pick: Claude Design.** The last three carousels on @daviss.dev were built in it, including the one that sent you here. Prompt in, design out. The hand-off to Claude Code is direct because both live in the same Claude account, and a mockup made in Design can be implemented by Code in the same project.
+**My pick: Claude Design.** The last three carousels on @davis.mcm were built in it, including the one that sent you here. Prompt in, design out. The hand-off to Claude Code is direct because both live in the same Claude account, and a mockup made in Design can be implemented by Code in the same project.
 
 **Reach for Framer when the thing is a marketing site.** The canvas is also the host. CMS, localization, A/B testing, and a custom domain on the Basic plan. The site ships from where you design it.
 
@@ -162,7 +162,7 @@ Then type `/stack-map`. It reads config files and lockfiles only, never source, 
 
 ---
 
-## 4. 02 Code: Claude Code // Codex
+## 4. Code: Claude Code // Codex
 
 **The job.** The agent that writes and runs the code with you, in your repo, with your tools.
 
@@ -212,7 +212,7 @@ Codex is included with ChatGPT Plus at $20 a month and above. It runs as a CLI, 
 
 ---
 
-## 5. 03 Framework: Next.js
+## 5. Framework: Next.js
 
 **The job.** The app. Pages, logins, API routes, and the server code that talks to the database, in one project.
 
@@ -246,7 +246,7 @@ The `--yes` flag takes the defaults: TypeScript, Tailwind, ESLint, App Router, T
 
 ---
 
-## 6. 04 Database: Supabase // Neon
+## 6. Database: Supabase // Neon
 
 **The job.** Data, auth, and files.
 
@@ -297,7 +297,7 @@ Or sign up at [neon.com](https://neon.com), create a project, and put the connec
 
 ---
 
-## 7. 05 Automation: n8n
+## 7. Automation: n8n
 
 **The job.** Everything that runs on a trigger or a schedule, between the tools on this list.
 
@@ -334,7 +334,7 @@ The Community Edition is free to self-host under n8n's Sustainable Use License, 
 
 ---
 
-## 8. 06 Source control: GitHub
+## 8. Source control: GitHub
 
 **The job.** Every change to every file, reviewed before it merges, undoable after.
 
@@ -376,7 +376,7 @@ It expects `lint` and `typecheck` scripts in `package.json`. `create-next-app` g
 
 ---
 
-## 9. 07 Deploy: Cloudflare
+## 9. Deploy: Cloudflare
 
 **The job.** Where the app goes live. One account holds the Worker that runs it, the DNS, object storage, a small SQL database, and the domain itself.
 
@@ -431,7 +431,7 @@ Edit `name` in `wrangler.jsonc` first. The dry run prints the bundle size. Then 
 
 ---
 
-## 10. 08 Decisions: Jev
+## 10. Decisions: Jev
 
 **The job.** The yes-or-no, pick-one, and score-this decisions inside an agent. Routing, scoring, risk gates. Text goes in, a decision with a probability comes out, and no text is generated.
 
@@ -473,7 +473,7 @@ claude plugin install typesafe@typesafe-ai
 
 ---
 
-## 11. 09 Memory: Obsidian // Mem0
+## 11. Memory: Obsidian // Mem0
 
 **The job.** Where the agent keeps what it learned.
 
@@ -519,7 +519,7 @@ Get a key at [app.mem0.ai](https://app.mem0.ai), no card required. Every call ca
 
 ---
 
-## 12. 10 Integrations: MCP // Composio
+## 12. Integrations: MCP // Composio
 
 **The job.** How the agent touches Gmail, Slack, GitHub, and your CRM.
 
@@ -702,4 +702,4 @@ All read October 8, 2026.
 ---
 
 Built by OperatorOS | [operatoros.ai](https://operatoros.ai)
-Follow [@daviss.dev](https://instagram.com/daviss.dev) and [@os.operator](https://instagram.com/os.operator) for production-grade AI guides.
+Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@os.operator](https://instagram.com/os.operator) for production-grade AI guides.

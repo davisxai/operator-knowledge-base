@@ -1,6 +1,6 @@
 # Jev Setup and Five Patterns
 
-> Follow [@daviss.dev](https://instagram.com/daviss.dev) and [@os.operator](https://instagram.com/os.operator) on Instagram for more guides like this.
+> Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@os.operator](https://instagram.com/os.operator) on Instagram for more guides like this.
 
 ---
 
@@ -671,5 +671,5 @@ All checked September 29, 2026.
 ---
 
 Built by OperatorOS | [operatoros.ai](https://operatoros.ai)
-Follow [@daviss.dev](https://instagram.com/daviss.dev) and [@os.operator](https://instagram.com/os.operator) for production-grade AI guides.
+Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@os.operator](https://instagram.com/os.operator) for production-grade AI guides.
 Patterns 1 through 4 are TypeSafe's documented patterns. Pattern 5 is adapted from LangChain's harness work.

@@ -13,4 +13,4 @@ These originally shipped as gated lead magnets on Instagram. Here they're free, 
 - **[agent-vault-starter/](agent-vault-starter/)** The markdown vault my company runs on, as files: a copy-and-run starter with the contract, the schema, ten page templates, five operations as Claude Code skills (ingest, query, lint, build, dream), the auto-capture rule, the nightly consolidation agent with its launchd job, and a frontmatter validator.
 - **[build-stack/](build-stack/)** The ten layers a build goes through, design to deploy, with my pick and the alternative per layer, exact setup commands, the docs that matter, what each costs, the config files from my production Cloudflare deploy, a scaffold script, a doctor script, and the `/stack-map` skill.
 
-More land as posts ship. Follow [@daviss.dev](https://instagram.com/daviss.dev) to catch them first.
+More land as posts ship. Follow [@davis.mcm](https://instagram.com/davis.mcm) to catch them first.
