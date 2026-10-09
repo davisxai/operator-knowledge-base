@@ -74,10 +74,14 @@ Full playbooks that originally shipped as gated Instagram lead magnets. Complete
 - **[claude-code-skills-starter-kit/](guides/claude-code-skills-starter-kit/)** What Claude Code skills are, how they work, and five production-tested skills you can install in under a minute.
 - **[claude-agents-guide/](guides/claude-agents-guide/)** The mental model for agents, working SKILL.md files, subagent patterns, the MCP servers to install first, and where it breaks in production.
 - **[jev-setup-and-patterns/](guides/jev-setup-and-patterns/)** TypeSafe's Jev from account to production. Install, the three question types, confidence thresholds, five runnable pattern scripts, and where it breaks.
+- **[grok-bot-founder-team/](guides/grok-bot-founder-team/)** Grok Bot as a team of eight named bots for a founder-led company. Install, the operating model, eight paste-ready job descriptions, handoff protocol, routines, and auto-review rules.
+- **[agent-vault-starter/](guides/agent-vault-starter/)** The markdown vault my company runs on, as files. A copy-and-run starter with the contract, the schema, ten page templates, five operations as Claude Code skills, the auto-capture rule, the nightly consolidation agent, and a frontmatter validator.
+- **[build-stack/](guides/build-stack/)** The ten layers a build goes through, design to deploy. My pick and the alternative per layer, exact setup commands, what each costs, the config files from my production Cloudflare deploy, a scaffold script, a doctor script, and the `/stack-map` skill.
+- **[ai-brain/](guides/ai-brain/)** One Claude project that writes in your voice, designs in your style, and knows your customer. The instructions, the brand voice and character bible prompts, the brand kit and customer templates, the memory file format for corrections, my filled examples, and a script that copies the folder.
 
 ### [skills/](skills/) Installable skills
 
-Claude Code skills from my actual setup. Copy a folder into `~/.claude/skills/` and it runs, no restart needed. Currently: create, extract, research, recurring-report, swarm, system-design.
+Claude Code skills from my actual setup. Copy a folder into `~/.claude/skills/` and it runs, no restart needed. Currently: create, extract, research, recurring-report, swarm, system-design, vault-ingest, stack-map.
 
 ### [resources/](resources/) Tools with verdicts
 
@@ -95,6 +99,7 @@ The open source projects and tools I run or properly evaluated, including the re
 - **You have never shipped a dashboard.** Go straight to [dashboards/mission-control.md](dashboards/mission-control.md). It is the honest minimum that still counts as real.
 - **You want to own your infrastructure.** Start at [stacks/self-hosted-stack.md](stacks/self-hosted-stack.md) and do not point a domain at anything before the hardening checklist.
 - **You are new to Claude Code.** The [skills starter kit](guides/claude-code-skills-starter-kit/) is the fastest on-ramp, and [skills/](skills/) gives you working examples to copy.
+- **You want Claude to write and design like you.** [guides/ai-brain/](guides/ai-brain/) is one project folder, two prompts, and the correction loop. No infrastructure.
 
 ## The ideas that repeat
 

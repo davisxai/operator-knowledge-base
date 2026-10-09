@@ -30,6 +30,9 @@
 * [Claude Code skills starter kit](guides/claude-code-skills-starter-kit/README.md)
 * [Jev setup and five patterns](guides/jev-setup-and-patterns/README.md)
 * [Grok Bot founder team](guides/grok-bot-founder-team/README.md)
+* [Agent vault starter](guides/agent-vault-starter/README.md)
+* [The build stack](guides/build-stack/README.md)
+* [AI brain](guides/ai-brain/README.md)
 
 ## Skills
 
@@ -46,6 +49,10 @@
   * [SKILL.md](skills/swarm/SKILL.md)
 * [system-design](skills/system-design/README.md)
   * [SKILL.md](skills/system-design/SKILL.md)
+* [vault-ingest](skills/vault-ingest/README.md)
+  * [SKILL.md](skills/vault-ingest/SKILL.md)
+* [stack-map](skills/stack-map/README.md)
+  * [SKILL.md](skills/stack-map/SKILL.md)
 
 ## Resources
 
