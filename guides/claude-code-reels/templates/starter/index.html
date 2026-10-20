@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <title>Starter Reel</title>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/TextPlugin.min.js"></script>
+    <style>
+      /* Your brand lives here. Change a value and every scene follows. */
+      :root {
+        --bg: #f4f1ea; --ink: #0a0a0a; --muted: #5c6966; --accent: #d2042d;
+        --card: #ffffff; --line: rgba(10, 10, 10, 0.1); --fill: #ece8df;
+        --serif: "Instrument Serif", Georgia, serif;
+        --body: "Hanken Grotesk", Arial, sans-serif;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--bg); color: var(--ink); font-family: var(--body); -webkit-font-smoothing: antialiased; }
+      #root { position: relative; width: 100%; height: 100%; overflow: hidden; background: var(--bg); }
+      #prog { position: absolute; top: 0; left: 0; width: 100%; height: 6px; background: var(--accent); transform-origin: left center; }
+      /* Instagram safe frame: keep content between y 450 and 1660, and left of x 900 below y 1180 */
+      #hdr { position: absolute; top: 262px; left: 80px; right: 80px; height: 80px; display: flex; align-items: center; justify-content: space-between; font-weight: 600; font-size: 26px; }
+      #hdr span { color: var(--muted); font-weight: 500; }
+      .clip { position: absolute; inset: 0; }
+      .stage { position: absolute; inset: 0; }
+      .hl { position: absolute; left: 80px; right: 80px; font-family: var(--serif); font-weight: 400; letter-spacing: -0.02em; line-height: 0.97; }
+      .hl .w { display: inline-block; }
+      .hl .acc { font-style: italic; color: var(--accent); }
+      .card { position: absolute; left: 80px; width: 920px; background: var(--card); border: 2px solid var(--line); border-radius: 26px; box-shadow: 0 18px 50px rgba(10, 10, 10, 0.08); overflow: hidden; }
+      .bar { height: 64px; display: flex; align-items: center; gap: 10px; padding: 0 24px; border-bottom: 2px solid var(--fill); }
+      .bar i { width: 18px; height: 18px; border-radius: 50%; background: #ff5f57; display: block; }
+      .bar i:nth-child(2) { background: #febc2e; }
+      .bar i:nth-child(3) { background: #28c840; }
+      .ln { height: 52px; display: flex; align-items: center; gap: 14px; padding: 0 30px; font-size: 29px; white-space: nowrap; overflow: hidden; }
+      .ln .dot { width: 14px; height: 14px; border-radius: 50%; background: var(--accent); display: block; flex: 0 0 14px; }
+      .ln .you { color: #0086c9; font-weight: 700; }
+      .ln .m { color: var(--muted); }
+      .kick { position: absolute; left: 80px; top: 452px; font-size: 24px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+      .kick b { color: var(--accent); }
+      #a-head { top: 452px; font-size: 140px; }
+      #a-term { top: 830px; padding-bottom: 18px; }
+      #b-head { top: 506px; font-size: 110px; white-space: nowrap; }
+      #b-card { top: 690px; padding: 20px 0; }
+      #c-top { position: absolute; left: 0; right: 0; top: 560px; text-align: center; font-family: var(--serif); font-size: 124px; }
+      #c-word { position: absolute; left: 0; right: 0; top: 740px; text-align: center; font-family: var(--serif); font-style: italic; font-size: 190px; color: var(--accent); }
+      #c-sub { position: absolute; left: 120px; right: 120px; top: 1000px; text-align: center; font-size: 36px; line-height: 1.35; color: var(--muted); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="10" data-width="1080" data-height="1920">
+      <audio id="vo" src="assets/vo/vo.mp3" data-start="0" data-duration="10" data-track-index="9" data-volume="1"></audio>
+      <div id="prog"></div>
+      <div id="hdr">@yourhandle<span>yoursite.com</span></div>
+
+      <!-- each scene names the first and last script line it covers; apply_timing.py sets its window -->
+      <section id="sA" class="clip" data-from="s01" data-to="s01" data-start="0" data-duration="3" data-track-index="0">
+        <div class="stage" id="a-stage">
+          <div id="a-head" class="hl"><span class="w">Video,</span> <span class="w">built</span><br /><span class="w">in</span> <span class="w acc">code.</span></div>
+          <div id="a-term" class="card">
+            <div class="bar"><i></i><i></i><i></i></div>
+            <div class="ln" id="a-l1"><span class="you">&gt;</span><span id="a-type"></span></div>
+            <div class="ln" id="a-l2"><i class="dot"></i><b>Write</b><span class="m">(index.html)</span></div>
+            <div class="ln" id="a-l3"><i class="dot"></i><b>Bash</b><span class="m">(npx hyperframes render)</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sB" class="clip" data-from="s02" data-to="s02" data-start="3" data-duration="3" data-track-index="1">
+        <div class="stage" id="b-stage">
+          <div class="kick"><b>01</b> Your first step</div>
+          <div id="b-head" class="hl"><span class="w">One</span> <span class="w">line</span> <span class="w acc">per beat.</span></div>
+          <div id="b-card" class="card">
+            <div class="ln b-row"><i class="dot"></i>Every line in the script is a scene</div>
+            <div class="ln b-row"><i class="dot"></i>Every word has a timestamp</div>
+            <div class="ln b-row"><i class="dot"></i>Every animation lands on its word</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sC" class="clip" data-from="s03" data-to="s03" data-start="6" data-duration="4" data-track-index="2">
+        <div class="stage" id="c-stage">
+          <div id="c-top">Comment</div>
+          <div id="c-word">KEYWORD</div>
+          <div id="c-sub">and I'll send you the guide.</div>
+        </div>
+      </section>
+    </div>
+
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      // apply_timing.py fills these three from assets/vo/timing.json
+      const SEG = {"s01": {"start": 0.1, "end": 2.6}, "s02": {"start": 3.0, "end": 5.6}, "s03": {"start": 6.0, "end": 9.5}};
+      const WORDS = {"s01": [0, 0.4, 0.8, 1.2, 1.6], "s02": [0, 0.4, 0.8, 1.2, 1.6], "s03": [0, 0.4, 0.8, 1.2, 1.6]};
+      const DUR = 10;
+      // S("s02") is when a line starts. W("s02", 3) is when its fourth word starts. Key every tween to one.
+      const S = (k, o = 0) => SEG[k].start + o;
+      const W = (k, i, o = 0) => SEG[k].start + WORDS[k][Math.min(i, WORDS[k].length - 1)] + o;
+
+      const tl = gsap.timeline({ paused: true });
+      const rise = (sel, at, step = 0.08) => gsap.utils.toArray(sel).forEach((w, i) =>
+        tl.fromTo(w, { opacity: 0, y: 70 }, { opacity: 1, y: 0, duration: 0.55, ease: "power4.out" }, at + i * step));
+      const line = (sel, at) => tl.fromTo(sel, { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.3, ease: "power3.out" }, at);
+
+      tl.fromTo("#prog", { scaleX: 0 }, { scaleX: 1, duration: DUR, ease: "none" }, 0);
+
+      /* A: the hook */
+      rise("#a-head .w", S("s01"));
+      tl.fromTo("#a-term", { opacity: 0, y: 90 }, { opacity: 1, y: 0, duration: 0.6, ease: "power4.out" }, S("s01", 0.2));
+      tl.to("#a-type", { text: { value: "make this a reel" }, duration: 0.6, ease: "none" }, S("s01", 0.5));
+      line("#a-l2", W("s01", 2));
+      line("#a-l3", W("s01", 3));
+      tl.to("#a-stage", { opacity: 0, y: -60, duration: 0.3, ease: "power3.in" }, S("s02", -0.25));
+
+      /* B: one step */
+      tl.fromTo("#b-stage .kick", { opacity: 0, x: -30 }, { opacity: 1, x: 0, duration: 0.35, ease: "power3.out" }, S("s02", -0.1));
+      rise("#b-head .w", S("s02"));
+      tl.fromTo("#b-card", { opacity: 0, y: 90 }, { opacity: 1, y: 0, duration: 0.6, ease: "power4.out" }, S("s02", 0.2));
+      gsap.utils.toArray(".b-row").forEach((r, i) => line(r, W("s02", 1 + i)));
+      tl.to("#b-stage", { opacity: 0, y: -60, duration: 0.3, ease: "power3.in" }, S("s03", -0.25));
+
+      /* C: the call to action */
+      tl.fromTo("#c-top", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 0.45, ease: "power4.out" }, S("s03", -0.1));
+      tl.fromTo("#c-word", { opacity: 0, scale: 1.5, filter: "blur(20px)" }, { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.5, ease: "power4.out" }, W("s03", 1));
+      tl.fromTo("#c-sub", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, W("s03", 2));
+
+      window.__timelines["main"] = tl;
+    </script>
+  </body>
+</html>

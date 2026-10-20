@@ -1,0 +1,11 @@
+{
+  "voice_id": "PASTE_YOUR_ELEVENLABS_VOICE_ID",
+  "model": "eleven_v4",
+  "speed": 1.0,
+  "segs": [
+    ["s01", "This video was built in code."],
+    ["s02", "One line per beat. Every word gets a timestamp."],
+    ["h02", 0.6],
+    ["s03", "Comment KEYWORD and I'll send you the guide."]
+  ]
+}

@@ -82,6 +82,7 @@ Full playbooks that originally shipped as gated Instagram lead magnets. Complete
 - **[rea/](guides/rea/)** REA, Reverse Engineer Anything, run on your own app first. The install, the engines, all 22 targets, the first three questions with their CLI commands, how to read the evidence and the six guided prompts, process capture, and the line the repo draws.
 - **[llm-wiki-setup/](guides/llm-wiki-setup/)** Andrej Karpathy's llm-wiki pattern, set up from zero. The day-one folder with one command, a CLAUDE.md schema you paste, index.md and log.md, prompts for ingest, query, and lint, the Obsidian settings, and qmd for search at scale.
 - **[chief-of-staff/](guides/chief-of-staff/)** The ECC chief-of-staff agent with the rest of its setup. Both install paths, tone and memory file templates, `/today`, `/mail`, `/slack`, and `/schedule-reply`, the post-send follow-through hook, and a free-slot script.
+- **[claude-code-reels/](guides/claude-code-reels/)** Make reels in Claude Code. The watch skill, HyperFrames and all 21 of its skills, three reel skills, word-level voice timing from your ElevenLabs clone, and a starter reel.
 
 ### [skills/](skills/) Installable skills
 
