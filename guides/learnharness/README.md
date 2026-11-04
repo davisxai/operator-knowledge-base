@@ -1,3 +1,5 @@
+![LearnHarness](assets/banner.png)
+
 # LearnHarness Setup and Usage
 
 > Follow [@os.operator](https://instagram.com/os.operator) and [@davis.mcm](https://instagram.com/davis.mcm) on Instagram for more guides like this.
@@ -91,6 +93,8 @@ npm run dev
 
 First run shows a provider picker. Everything after that lives in **Settings → Providers**. Four connection types, pick one to start:
 
+![The provider picker: choose your AI provider and paste its API key](assets/provider-setup.png)
+
 **Option A: Provider API key.** Paste a key from your model provider and pay that provider's rates directly. No LearnHarness markup.
 
 **Option B: Subscription connection.** ChatGPT, GitHub Copilot, and Grok connect through their own sign-in flows and run on your existing account limits. The docs are explicit that these "do not silently fall back to API-key billing."
@@ -122,6 +126,8 @@ LearnHarness does not install or download models. Your server runs them, it just
 ## 4. Pick your model slots
 
 There are no factory model selections. Before your first session, open Settings and assign three slots:
+
+![The three model tiers on my machine: Strong and Vision on Opus, Cheap on Sonnet](assets/model-tiers.png)
 
 - **Strong:** the model new sessions start with. Your best reasoning model goes here.
 - **Cheap:** a lighter model for lighter work.
@@ -173,6 +179,10 @@ And the system prompts are not a secret. The README states: "System prompts are 
 3. It draws a plan from your edge to the goal. Reply naturally to accept it or revise it.
 4. Teaching runs in steps. You predict, it explains, it checks. Say when something is fuzzy. The whole design assumes honest signals.
 
+What a probe looks like in a real session, with the "I don't know" option, the confidence slider, the thinking field, and the live token meter:
+
+![A real prediction step: options, confidence slider, thinking field, token and cost meter](assets/prediction-screen.png)
+
 > [!TIP]
 > **Pro tip:** Do not perform competence at the prober. If you inflate what you know, the plan starts past your real edge and every later step is built on the gap the app exists to prevent. Confidence is self-reported, and the system takes you at your word.
 
@@ -181,6 +191,8 @@ And the system prompts are not a secret. The README states: "System prompts are 
 ## 7. The knowledge graph
 
 Every session distills into a graph. What it stores, in the repo's words: propositions and reasoning chains, "individual claims and the premises that lead to them," with links back to the source sessions. And explicitly: "It stores the ideas and their connections, not ratings of your ability."
+
+![A real graph view: constellation clusters of claims and reasoning chains, with the Teach and Practice composer below](assets/graph-view.png)
 
 That is the difference from the knowledge graphs flooding your feed. Those are knowledge bases built for an AI agent to read and act on. This one is a map of what you have actually been taught, growing in parallel while you learn. A second brain where the brain is yours.
 
