@@ -42,9 +42,8 @@ This is the build kit for the dashboard from the video. It goes module by module
 11. [Propose, then approve](#11-propose-then-approve)
 12. [Which model does which job](#12-which-model-does-which-job)
 13. [Pro tips](#13-pro-tips)
-14. [Limitations](#14-limitations)
-15. [Quick reference](#15-quick-reference)
-16. [Sources](#16-sources)
+14. [Quick reference](#14-quick-reference)
+15. [Sources](#15-sources)
 
 ---
 
@@ -142,7 +141,7 @@ The worker calls the Gmail API directly with the official `googleapis` library. 
 Setup, once:
 
 1. In [Google Cloud Console](https://console.cloud.google.com), create a project and enable the **Gmail API**.
-2. Under **Google Auth Platform**, configure the consent screen and add yourself as a test user.
+2. Under **Google Auth Platform**, configure the consent screen, then publish the app to production. An app left in testing mode gets refresh tokens that expire after 7 days. For your own mailboxes it can stay unverified.
 3. Create an OAuth client of type **Desktop app**. Copy the client ID and secret into `.env`.
 4. Run the token script once per mailbox, signed into that mailbox in your browser:
 
@@ -461,17 +460,7 @@ Make the model a setting, not a constant. Mine are stored in `sync_state` and ed
 
 ---
 
-## 14. Limitations
-
-- **Polling, not push.** Gmail syncs every two minutes. Fine for an operations view, not for anything that needs instant reaction.
-- **Google test mode.** An OAuth app in testing mode issues refresh tokens that Google can expire after 7 days. For a personal tool, publish the app (it can stay unverified for your own accounts) so tokens last.
-- **City-level map.** Gazetteer geocoding puts every lead at its city center. Good for clusters and territory, not for routing.
-- **The dream agent runs where the vault is.** If your laptop is asleep at 3am, that night's run waits for the next one, which consolidates both days.
-- **macOS scheduling.** The launchd job is Mac only. On Linux use cron or a systemd timer with the same command.
-
----
-
-## 15. Quick reference
+## 14. Quick reference
 
 **Files in this kit**
 
@@ -515,7 +504,7 @@ python3 scripts/gazetteer-to-csv.py 2024_Gaz_place_national.txt > city_centroids
 
 ---
 
-## 16. Sources
+## 15. Sources
 
 - [Claude Agent SDK overview](https://docs.claude.com/en/docs/agent-sdk/overview)
 - [Claude tool use](https://docs.claude.com/en/docs/agents-and-tools/tool-use/overview)
