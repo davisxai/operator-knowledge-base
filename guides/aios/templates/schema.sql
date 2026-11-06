@@ -222,3 +222,25 @@ CREATE TABLE events (
   created_at timestamptz DEFAULT now()
 );
 CREATE INDEX events_starts_at_idx ON events (starts_at);
+
+-- Lock every table. Supabase exposes the public schema over its REST API, so without
+-- row level security anyone holding the anon key could read your email. With RLS on and
+-- no policies, only the service role and direct Postgres connections get through.
+-- Use DATABASE_URL / DATABASE_URL_DIRECT (or the service role key) on the server side only,
+-- and never ship the anon key to a browser for these tables.
+ALTER TABLE accounts ENABLE ROW LEVEL SECURITY;
+ALTER TABLE email_threads ENABLE ROW LEVEL SECURITY;
+ALTER TABLE emails ENABLE ROW LEVEL SECURITY;
+ALTER TABLE email_triage ENABLE ROW LEVEL SECURITY;
+ALTER TABLE conversations ENABLE ROW LEVEL SECURITY;
+ALTER TABLE messages ENABLE ROW LEVEL SECURITY;
+ALTER TABLE agent_runs ENABLE ROW LEVEL SECURITY;
+ALTER TABLE daily_briefs ENABLE ROW LEVEL SECURITY;
+ALTER TABLE notifications ENABLE ROW LEVEL SECURITY;
+ALTER TABLE actions ENABLE ROW LEVEL SECURITY;
+ALTER TABLE sync_state ENABLE ROW LEVEL SECURITY;
+ALTER TABLE heartbeats ENABLE ROW LEVEL SECURITY;
+ALTER TABLE vault_entities ENABLE ROW LEVEL SECURITY;
+ALTER TABLE leads ENABLE ROW LEVEL SECURITY;
+ALTER TABLE city_centroids ENABLE ROW LEVEL SECURITY;
+ALTER TABLE events ENABLE ROW LEVEL SECURITY;

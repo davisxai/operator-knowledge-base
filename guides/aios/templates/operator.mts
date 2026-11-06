@@ -1,26 +1,35 @@
 // Usage: VAULT_PATH=~/path/to/vault ANTHROPIC_API_KEY=... npx tsx operator.mts "list out all my offers"
 // A read-only Operator: the Claude Agent SDK with three vault tools, answering from your own files.
 // Needs: npm install @anthropic-ai/claude-agent-sdk zod tsx
-import { readFileSync, readdirSync, statSync } from "node:fs";
+import { lstatSync, readFileSync, readdirSync, realpathSync } from "node:fs";
 import { join, relative, resolve, sep } from "node:path";
 import { createSdkMcpServer, query, tool } from "@anthropic-ai/claude-agent-sdk";
 import { z } from "zod";
 
-const VAULT = resolve(process.env.VAULT_PATH ?? ".");
+const VAULT = realpathSync(resolve(process.env.VAULT_PATH ?? "."));
 const SKIP = new Set([".obsidian", ".git", ".claude", "node_modules"]);
 
 function walk(dir: string): string[] {
   return readdirSync(dir).flatMap((name) => {
     if (SKIP.has(name)) return [];
     const full = join(dir, name);
-    if (statSync(full).isDirectory()) return walk(full);
+    const stat = lstatSync(full);
+    if (stat.isSymbolicLink()) return [];
+    if (stat.isDirectory()) return walk(full);
     return name.endsWith(".md") ? [relative(VAULT, full)] : [];
   });
 }
 
+// Only markdown pages inside the vault. Symlinks are resolved before the check,
+// and hidden or tooling folders are off limits.
 function safePath(rel: string): string | null {
-  const full = resolve(VAULT, rel);
-  return full.startsWith(VAULT + sep) ? full : null;
+  if (!rel.endsWith(".md") || rel.split(/[\\/]/).some((part) => SKIP.has(part))) return null;
+  try {
+    const full = realpathSync(resolve(VAULT, rel));
+    return full.startsWith(VAULT + sep) ? full : null;
+  } catch {
+    return null;
+  }
 }
 
 function text(t: string) {
@@ -101,8 +110,14 @@ for await (const message of query({
     mcpServers: {
       vault: createSdkMcpServer({ name: "vault", version: "1.0.0", tools: [vaultSearch, vaultRead, vaultList] }),
     },
+    // No built-in tools at all (no Bash, Write, Edit, Read, web). Only the three vault tools exist,
+    // and canUseTool refuses anything else that slips through.
+    tools: [],
     allowedTools: ["mcp__vault__vault_search", "mcp__vault__vault_read", "mcp__vault__vault_list"],
-    disallowedTools: ["Write", "Edit", "Bash", "WebFetch", "WebSearch"],
+    canUseTool: async (name, input) =>
+      name.startsWith("mcp__vault__") || name === "ToolSearch"
+        ? { behavior: "allow", updatedInput: input }
+        : { behavior: "deny", message: "Operator is read only. Only the vault tools are available." },
   },
 })) {
   if (message.type === "assistant") {
