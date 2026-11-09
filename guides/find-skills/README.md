@@ -1,3 +1,5 @@
+![The first skill should install all the others](assets/banner.png)
+
 # find-skills: The Skill That Installs Skills
 
 > Follow [@os.operator](https://instagram.com/os.operator) on Instagram for more guides like this.
@@ -39,6 +41,8 @@ Adding skills to Claude Code by hand is the same loop every time. Search GitHub 
 
 find-skills activates when you ask Claude Code things like "find a skill for X", "is there a skill that can do X", or "how do I do X" where X is a common task. You do not invoke it by name. The skill's own description tells Claude when to fire it.
 
+<p align="center"><img src="assets/the-ask.gif" alt="Typing an ask into Claude Code while the directory's skill cards wait behind it" width="420"></p>
+
 ### 2. The search and rank
 
 The skill checks the [skills.sh leaderboard](https://skills.sh) first for a well-known match, then runs the Skills CLI search:
@@ -49,6 +53,8 @@ npx skills find [query] [--owner <owner>]
 
 skills.sh indexes the open agent skills ecosystem. As of November 9, 2026, the directory's All Time tab counts 1,295,047 skills. Matches come back ranked, and the skill weighs install counts and source reputation when it proposes one.
 
+<p align="center"><img src="assets/the-proof.gif" alt="The skills.sh all-time leaderboard with find-skills locked at number one of 1,295,047" width="420"></p>
+
 ### 3. Approve and install
 
 The skill presents what it found, with numbers. You approve one, and it installs through the same CLI:
@@ -58,6 +64,8 @@ npx skills add <owner/repo> --skill <name>
 ```
 
 The skill lands in `.claude/skills/` in your project. No restart needed.
+
+<p align="center"><img src="assets/approve-install.gif" alt="An approve dialog for frontend-design, then the terminal line confirming the install" width="420"></p>
 
 ## The anatomy
 
@@ -98,6 +106,8 @@ The design cluster is one of the strongest on the directory. A search for design
 </details>
 
 ## The compounding effect
+
+<p align="center"><img src="assets/toolbox.gif" alt="A fan of installed skill cards under the line: you maintain the toolbox" width="420"></p>
 
 Week one, find-skills is a shortcut: two or three installs you would have hunted for manually. A month in, your project carries a toolbox shaped by the work you actually do, because every skill got added at the moment a real task needed it. Three months in, the loop inverts. You stop tracking the ecosystem. When a task needs a capability, the capability gets found, vetted by numbers, and installed in the same conversation.
 
