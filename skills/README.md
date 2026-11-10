@@ -33,6 +33,7 @@ No restart needed. Invoke with `/skill-name`.
 - **[system-design/](system-design/)** Any system into a buildable architecture: pipeline, tools, volume math, cost stack, decision list.
 - **[vault-ingest/](vault-ingest/)** Run your agent-maintained vault's ingest operation from any project. The write path behind the auto-capture rule.
 - **[stack-map/](stack-map/)** Read any repo against the ten-layer build stack. Present, partial, or not detected per layer, with the file that proves it and the next command for each gap.
+- **[video-to-skills/](video-to-skills/)** One person's long video into an evidence-based analysis and a three-skill pack (script, ideate, validate) that reads your own voice file first. Ships with its analysis spec and the three templates it fills.
 
 ## The standard these follow
 
