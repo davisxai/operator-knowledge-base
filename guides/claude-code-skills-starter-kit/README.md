@@ -1,6 +1,6 @@
 # Claude Code Skills: The Starter Kit
 
-> Follow @os.operator on Instagram for more guides like this.
+> Follow @operatoros on Instagram for more guides like this.
 
 ---
 
@@ -461,4 +461,4 @@ mkdir -p ~/.claude/skills/[name]
 ---
 
 Built by OperatorOS | operatoros.ai
-Follow @os.operator for production-grade AI guides.
+Follow @operatoros for production-grade AI guides.

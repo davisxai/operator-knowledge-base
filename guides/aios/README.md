@@ -2,7 +2,7 @@
 
 # AIOS: The Operations OS
 
-> Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@os.operator](https://instagram.com/os.operator) on Instagram for more guides like this.
+> Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@operatoros](https://instagram.com/operatoros) on Instagram for more guides like this.
 
 ### Every email, lead, and note in the business on one screen, with an agent that answers from your own files.
 
@@ -521,4 +521,4 @@ python3 scripts/gazetteer-to-csv.py 2024_Gaz_place_national.txt > city_centroids
 ---
 
 Built by OperatorOS | [operatoros.ai](https://operatoros.ai)
-Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@os.operator](https://instagram.com/os.operator) on Instagram.
+Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@operatoros](https://instagram.com/operatoros) on Instagram.

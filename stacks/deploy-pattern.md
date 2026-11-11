@@ -234,4 +234,4 @@ That last point generalizes past this one build mode. **Every deploy mode has on
 
 Built by OperatorOS | [operatoros.ai](https://operatoros.ai)
 
-Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@os.operator](https://instagram.com/os.operator) on Instagram.
+Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@operatoros](https://instagram.com/operatoros) on Instagram.

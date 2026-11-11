@@ -2,7 +2,7 @@
 
 # i-have-adhd: ADHD-Friendly Output for Your AI
 
-> Follow [@os.operator](https://instagram.com/os.operator) and [@davis.mcm](https://instagram.com/davis.mcm) on Instagram for more guides like this.
+> Follow [@operatoros](https://instagram.com/operatoros) and [@davis.mcm](https://instagram.com/davis.mcm) on Instagram for more guides like this.
 
 ### The repo, all ten rules, and how to run it in Claude Code.
 
@@ -300,4 +300,4 @@ The paste-in rules template and the before and after images come from the repo, 
 ---
 
 Built by OperatorOS | operatoros.ai
-Follow @os.operator for production-grade AI guides.
+Follow @operatoros for production-grade AI guides.

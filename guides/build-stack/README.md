@@ -4,7 +4,7 @@
 
 # The Build Stack
 
-> Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@os.operator](https://instagram.com/os.operator) on Instagram for more guides like this.
+> Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@operatoros](https://instagram.com/operatoros) on Instagram for more guides like this.
 
 ---
 
@@ -735,4 +735,4 @@ All read October 8, 2026.
 ---
 
 Built by OperatorOS | [operatoros.ai](https://operatoros.ai)
-Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@os.operator](https://instagram.com/os.operator) for production-grade AI guides.
+Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@operatoros](https://instagram.com/operatoros) for production-grade AI guides.

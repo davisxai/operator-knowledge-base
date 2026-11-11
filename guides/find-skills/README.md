@@ -2,7 +2,7 @@
 
 # find-skills: The Skill That Installs Skills
 
-> Follow [@os.operator](https://instagram.com/os.operator) on Instagram for more guides like this.
+> Follow [@operatoros](https://instagram.com/operatoros) on Instagram for more guides like this.
 
 A setup guide for find-skills by Vercel Labs: the Claude Code skill that searches the skills.sh directory and installs other skills on your approval. Not a tool review. Install, mechanics, and the setup I run.
 
@@ -212,5 +212,5 @@ npx skills remove
 ---
 
 Built by OperatorOS | [operatoros.ai](https://operatoros.ai)
-Follow [@os.operator](https://instagram.com/os.operator) for production-grade AI guides.
+Follow [@operatoros](https://instagram.com/operatoros) for production-grade AI guides.
 Skill credited to Vercel Labs.

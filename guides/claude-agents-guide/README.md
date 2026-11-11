@@ -1,6 +1,6 @@
 # Claude Agents: The Practical Guide
 
-> Follow @os.operator on Instagram for more guides like this.
+> Follow @operatoros on Instagram for more guides like this.
 
 ---
 
@@ -301,7 +301,7 @@ The compound starts at week 4. Most people quit at day 3 because the first skill
 ---
 
 Built by OperatorOS | [operatoros.ai](https://operatoros.ai)
-Follow [@os.operator](https://instagram.com/os.operator) for production-grade AI guides.
+Follow [@operatoros](https://instagram.com/operatoros) for production-grade AI guides.
 
 ---
 

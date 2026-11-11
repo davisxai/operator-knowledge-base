@@ -4,7 +4,7 @@
 
 # Grok Bot Founder Team
 
-> Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@os.operator](https://instagram.com/os.operator) on Instagram for more guides like this.
+> Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@operatoros](https://instagram.com/operatoros) on Instagram for more guides like this.
 
 ---
 
@@ -507,5 +507,5 @@ Checked September 30, 2026.
 ---
 
 Built by OperatorOS | operatoros.ai
-Follow @os.operator for production-grade AI guides.
+Follow @operatoros for production-grade AI guides.
 Roster shapes credited to xAI's published guides. Description layout, file-handoff finding, and authority split credited to Flavio Copes. Multi-team pattern credited to Eric Zakariasson.

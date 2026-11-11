@@ -4,7 +4,7 @@
 
 # Agent Vault Starter
 
-> Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@os.operator](https://instagram.com/os.operator) on Instagram for more guides like this.
+> Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@operatoros](https://instagram.com/operatoros) on Instagram for more guides like this.
 
 ---
 
@@ -510,4 +510,4 @@ curl -o ~/.claude/skills/vault-ingest/SKILL.md https://raw.githubusercontent.com
 ---
 
 Built by OperatorOS | [operatoros.ai](https://operatoros.ai)
-Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@os.operator](https://instagram.com/os.operator) for production-grade AI guides.
+Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@operatoros](https://instagram.com/operatoros) for production-grade AI guides.

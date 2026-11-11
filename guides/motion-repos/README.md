@@ -4,7 +4,7 @@
 
 # Motion Graphics Repos for Claude Code
 
-> Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@os.operator](https://instagram.com/os.operator) on Instagram for more guides like this.
+> Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@operatoros](https://instagram.com/operatoros) on Instagram for more guides like this.
 
 ---
 
@@ -370,4 +370,4 @@ cp templates/one-file-scene.html ./scene.html && open scene.html
 
 Built by OperatorOS | operatoros.ai
 
-Follow [@os.operator](https://instagram.com/os.operator) for production-grade AI guides. Repo list by Matt Penny, Applied AI. Each repo belongs to its maintainer, named above.
+Follow [@operatoros](https://instagram.com/operatoros) for production-grade AI guides. Repo list by Matt Penny, Applied AI. Each repo belongs to its maintainer, named above.

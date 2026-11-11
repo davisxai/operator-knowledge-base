@@ -2,7 +2,7 @@
 
 # LearnHarness Setup and Usage
 
-> Follow [@os.operator](https://instagram.com/os.operator) and [@davis.mcm](https://instagram.com/davis.mcm) on Instagram for more guides like this.
+> Follow [@operatoros](https://instagram.com/operatoros) and [@davis.mcm](https://instagram.com/davis.mcm) on Instagram for more guides like this.
 
 ### From download to a knowledge graph of what you actually understand.
 
@@ -481,5 +481,5 @@ Honest constraints, so you know what you are getting:
 ---
 
 Built by OperatorOS | [operatoros.ai](https://operatoros.ai)
-Follow [@os.operator](https://instagram.com/os.operator) for production-grade AI guides.
+Follow [@operatoros](https://instagram.com/operatoros) for production-grade AI guides.
 App credited to Eero Alvar, its creator.

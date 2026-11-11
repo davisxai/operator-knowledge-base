@@ -2,7 +2,7 @@
 
 # Video to Skills
 
-> Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@os.operator](https://instagram.com/os.operator) on Instagram for more guides like this.
+> Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@operatoros](https://instagram.com/operatoros) on Instagram for more guides like this.
 
 *From one long YouTube video to three Claude Code commands that put that person's practices to work on your own content, in your own voice.*
 
@@ -540,4 +540,4 @@ python3 scripts/pull.py <name> ~/path/to/file.mp4              # local file, str
 
 Built by OperatorOS | [operatoros.ai](https://operatoros.ai)
 
-Follow [@os.operator](https://instagram.com/os.operator) for production-grade AI guides. Caption parsing credited to Bradley Bonanno where noted. The example talk is by Alex Hormozi.
+Follow [@operatoros](https://instagram.com/operatoros) for production-grade AI guides. Caption parsing credited to Bradley Bonanno where noted. The example talk is by Alex Hormozi.

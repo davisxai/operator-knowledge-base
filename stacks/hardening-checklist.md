@@ -210,4 +210,4 @@ Two conclusions, both written into the operations repo:
 
 Built by OperatorOS | [operatoros.ai](https://operatoros.ai)
 
-Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@os.operator](https://instagram.com/os.operator) on Instagram.
+Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@operatoros](https://instagram.com/operatoros) on Instagram.
