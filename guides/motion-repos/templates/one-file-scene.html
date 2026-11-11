@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>One-file scene</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #0b0b0d; overflow: hidden; }
+  canvas { display: block; }
+  #label {
+    position: fixed; left: 24px; top: 20px; color: #f3f1ea; font: 500 14px/1.4 ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: 0.02em; opacity: 0.85;
+  }
+  #label b { color: #ff5a3c; font-weight: 600; }
+</style>
+<!-- three.js and its addons from one CDN, pinned to one version. No build step. -->
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://cdn.jsdelivr.net/npm/three@0.187.0/build/three.module.js",
+    "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.187.0/examples/jsm/"
+  }
+}
+</script>
+</head>
+<body>
+<div id="label">one-file-scene.html <b>three.js 0.187</b> / bloom pass on</div>
+<script type="module">
+import * as THREE from 'three';
+import { RoomEnvironment } from 'three/addons/environments/RoomEnvironment.js';
+import { EffectComposer } from 'three/addons/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/addons/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/addons/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/addons/postprocessing/OutputPass.js';
+
+// ---- the data: a flat chart that becomes a scene ----
+const values = [1.2, 1.8, 2.6, 3.1, 4.4];
+const labels = ['2021', '2022', '2023', '2024', '2025'];
+
+// ---- renderer, scene, camera ----
+const renderer = new THREE.WebGLRenderer({ antialias: true });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+renderer.toneMapping = THREE.ACESFilmicToneMapping;
+renderer.toneMappingExposure = 0.85;
+document.body.appendChild(renderer.domElement);
+
+const scene = new THREE.Scene();
+scene.background = new THREE.Color(0x0b0b0d);
+
+// Reflections come from an environment map, not from lights. RoomEnvironment is a built-in studio.
+const pmrem = new THREE.PMREMGenerator(renderer);
+scene.environment = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+scene.environmentIntensity = 0.35;
+
+const camera = new THREE.PerspectiveCamera(38, window.innerWidth / window.innerHeight, 0.1, 100);
+
+// ---- lights ----
+const key = new THREE.DirectionalLight(0xffffff, 1.6);
+key.position.set(6, 9, 4);
+key.castShadow = true;
+key.shadow.mapSize.set(2048, 2048);
+key.shadow.camera.left = -8; key.shadow.camera.right = 8;
+key.shadow.camera.top = 8; key.shadow.camera.bottom = -8;
+scene.add(key);
+scene.add(new THREE.AmbientLight(0xffffff, 0.08));
+
+// ---- floor ----
+const floor = new THREE.Mesh(
+  new THREE.PlaneGeometry(40, 40),
+  new THREE.MeshStandardMaterial({ color: 0x0e0e11, roughness: 0.6, metalness: 0.05 })
+);
+floor.rotation.x = -Math.PI / 2;
+floor.receiveShadow = true;
+scene.add(floor);
+
+// ---- the bars: one box per value, height is the value ----
+const bars = [];
+const gap = 1.6;
+values.forEach((v, i) => {
+  const geo = new THREE.BoxGeometry(1, 1, 1);
+  const mat = new THREE.MeshStandardMaterial({
+    color: i === values.length - 1 ? 0xff5a3c : 0xcfc8b8,
+    roughness: 0.45,
+    metalness: 0.15,
+    emissive: i === values.length - 1 ? 0xff5a3c : 0x000000,
+    emissiveIntensity: i === values.length - 1 ? 0.9 : 0,
+  });
+  const bar = new THREE.Mesh(geo, mat);
+  bar.castShadow = true;
+  bar.receiveShadow = true;
+  bar.position.x = (i - (values.length - 1) / 2) * gap;
+  bar.userData.target = v;
+  scene.add(bar);
+  bars.push(bar);
+});
+
+// ---- a chrome sphere, so the reflections have something to show on ----
+const orb = new THREE.Mesh(
+  new THREE.SphereGeometry(0.7, 64, 64),
+  new THREE.MeshStandardMaterial({ color: 0xffffff, roughness: 0.05, metalness: 1 })
+);
+orb.castShadow = true;
+orb.position.set(-4.6, 0.7, -1.2);
+scene.add(orb);
+
+// ---- the filter stack: render, bloom, output ----
+const composer = new EffectComposer(renderer);
+composer.addPass(new RenderPass(scene, camera));
+const bloom = new UnrealBloomPass(new THREE.Vector2(window.innerWidth, window.innerHeight), 0.45, 0.5, 1.0);
+composer.addPass(bloom);
+composer.addPass(new OutputPass());
+
+// ---- time ----
+// Everything is a function of t (seconds). Open ?t=2.5 to draw one exact frame, which is how a
+// frame-by-frame renderer captures video from a page. Without ?t it animates live.
+const params = new URLSearchParams(location.search);
+const fixedT = params.has('t') ? parseFloat(params.get('t')) : null;
+const start = performance.now();
+
+function easeOut(x) { return 1 - Math.pow(1 - x, 3); }
+
+function draw(t) {
+  // bars grow in, one after another
+  bars.forEach((bar, i) => {
+    const local = THREE.MathUtils.clamp((t - 0.25 * i) / 1.2, 0, 1);
+    const h = Math.max(0.02, bar.userData.target * easeOut(local));
+    bar.scale.y = h;
+    bar.position.y = h / 2;
+  });
+  // the camera orbits slowly and looks at the middle of the chart
+  const a = -0.55 + t * 0.12;
+  camera.position.set(Math.sin(a) * 11, 5.2 + Math.sin(t * 0.3) * 0.3, Math.cos(a) * 11);
+  camera.lookAt(0, 1.4, 0);
+  orb.rotation.y = t * 0.4;
+  composer.render();
+}
+
+function loop() {
+  const t = (performance.now() - start) / 1000;
+  draw(t);
+  requestAnimationFrame(loop);
+}
+
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  composer.setSize(window.innerWidth, window.innerHeight);
+});
+
+if (fixedT !== null) {
+  draw(fixedT);
+  document.title = `one-file-scene t=${fixedT}`;
+} else {
+  loop();
+}
+</script>
+</body>
+</html>
