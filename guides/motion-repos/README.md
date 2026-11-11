@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.jpg" alt="10 GitHub repos for motion graphics in Claude Code, with the lemo, GitHub, three.js, and Blender marks" width="100%">
+</p>
+
 # Motion Graphics Repos for Claude Code
 
 > Follow [@davis.mcm](https://instagram.com/davis.mcm) and [@os.operator](https://instagram.com/os.operator) on Instagram for more guides like this.
@@ -43,6 +47,8 @@ That means the quality of the picture lives in the libraries the code imports, n
 
 ## 1. How a reel gets made
 
+<p align="center"><img src="assets/slide-02.jpg" alt="Claude does not output video. It writes code that draws every frame: one HTML file, HyperFrames in headless Chrome, FFmpeg, the cloned voice sets the timing" width="420"></p>
+
 Four steps, every time.
 
 1. Claude writes one HTML file. CSS at the top, scenes as sections, one timeline at the bottom.
@@ -61,6 +67,8 @@ Five of the ten repos below did not exist on 2026-09-22. On 2026-11-11 they held
 Star counts are from the GitHub API on 2026-11-11. Every install line is copied from the repo's own README on the same day. The prompts are in [`templates/prompts.md`](templates/prompts.md), one block each, ready to paste.
 
 ### lemo-opuscar
+
+<p align="center"><img src="assets/slide-03.jpg" alt="Pick the film style before Claude draws a frame: four lemo-opuscar demo films, isometric infographic, night seascape, ink wash, retro terminal" width="420"></p>
 
 [github.com/lemomo-ai/lemo-opuscar](https://github.com/lemomo-ai/lemo-opuscar). 14,696 stars. Created 2026-09-26. MIT. By Lemomo.
 
@@ -95,6 +103,8 @@ Render this as a single HTML file in this folder, every frame drawn by code, no 
 
 ### three.js
 
+<p align="center"><img src="assets/slide-04.jpg" alt="three.js turns a flat slide into a scene: a 3D igloo with lit ice blocks" width="420"></p>
+
 [github.com/mrdoob/three.js](https://github.com/mrdoob/three.js). 118,131 stars. Created 2010-03-23. MIT.
 
 The JavaScript 3D library. Cameras, lights, materials, shadows, environment maps for reflections, a postprocessing chain of its own in `examples/jsm/postprocessing`. In a single HTML file it is one import map pointing at a CDN, no build step. That is how the starter file in this folder loads it. Claude can build the models in code, light them, and fly a camera through the scene, and the whole thing stays one file next to the rest of your reel.
@@ -116,6 +126,8 @@ Read one-file-scene.html. Keep the import map, the bloom pass, and the ?t= frame
 
 ### mcp-for-blender
 
+<p align="center"><img src="assets/slide-05.jpg" alt="Claude drives Blender over MCP: the MCP for Blender banner" width="420"></p>
+
 [github.com/ahujasid/mcp-for-blender](https://github.com/ahujasid/mcp-for-blender). 33,980 stars. Created 2025-03-07. MIT. By Siddharth Ahuja. A third-party integration, not made by Blender.
 
 Blender is the open source 3D suite. MCP is the protocol that lets Claude operate outside tools. This server connects the two: Claude builds the scene, places the camera, adds materials and shaders, and renders, from the chat. The one-command setup installs uv if needed, finds the MCP clients on your machine, adds a `blender` entry to each one you pick, and installs and enables the Blender addon. The addon starts its server when Blender opens, so Blender is open before you ask.
@@ -133,6 +145,8 @@ In Blender, build [a solar panel on a tilted roof], add materials and a three-po
 
 ### react-three-rapier
 
+<p align="center"><img src="assets/slide-06.jpg" alt="Real physics, things fall, stack, and collide: 560 balls through 12 rows of pins piling into a binomial curve" width="420"></p>
+
 [github.com/pmndrs/react-three-rapier](https://github.com/pmndrs/react-three-rapier). 1,578 stars. MIT. By pmndrs.
 
 Rapier is a physics engine compiled to WebAssembly. This repo wraps it for react-three-fiber: a `Physics` component, `RigidBody` around any mesh, colliders generated from the geometry or placed by hand, joints, collision events. Things fall, stack, and collide because the engine simulates them, not because someone keyframed them. In Matt's demos a Jenga tower collapses, dominoes topple to reveal a word, and 560 balls drop through 12 rows of pins into a bell curve. Version 2 targets fiber v9 and React 19.
@@ -147,6 +161,8 @@ Build a Galton board with @react-three/rapier: 12 rows of pins, 560 balls droppe
 
 ### react-postprocessing
 
+<p align="center"><img src="assets/slide-07.jpg" alt="A filter stack runs after every frame: the Take Control demo, god rays and grain over a red sun, with glow, depth of field, film grain, lens color, and glitch" width="420"></p>
+
 [github.com/pmndrs/react-postprocessing](https://github.com/pmndrs/react-postprocessing). 1,556 stars. MIT. By pmndrs.
 
 A filter stack that runs after every frame is drawn. You wrap your scene in an `EffectComposer` and list the effects: `Bloom`, `DepthOfField`, `Noise`, `Vignette`, glitch, color grading. The underlying postprocessing library merges every effect into one pass, so stacking five costs about the same as one. Two live demos ship in the README, Bubbles and Take Control, with their full code.
@@ -160,6 +176,8 @@ Add an EffectComposer to this scene with Bloom, DepthOfField, Noise and Vignette
 ```
 
 ### pixelfx
+
+<p align="center"><img src="assets/slide-08.jpg" alt="Pixel art and a hand-painted character, both as code: the 24 Clawd emotion sheet above the pixelfx and ClaudeAnimationBase cards" width="420"></p>
 
 [github.com/patch-gg/pixelfx](https://github.com/patch-gg/pixelfx). 6,871 stars. Created 2026-10-30. MIT. By Patch. The method is Hugo Duprez's, credited in the README.
 
@@ -205,6 +223,8 @@ Write beats.py: load track.mp3 with librosa, run beat_track and onset_detect, an
 
 ### video-shotcraft
 
+<p align="center"><img src="assets/slide-09.jpg" alt="Cuts land on the beat, shots come from a recipe: the video-shotcraft library with its 10 categories and recipe cards" width="420"></p>
+
 [github.com/Vincentwei1021/video-shotcraft](https://github.com/Vincentwei1021/video-shotcraft). 18,633 stars. Created 2026-07-19. Apache 2.0. By Vincent Wei.
 
 A skill for Claude Code and Codex that makes product promo videos: 124 shot recipe cards in 10 categories, 150 motion previews in the gallery, beat sync and sound design built in. You say "make a promo for my product." The agent captures your real pages, picks recipes that fit, storyboards the film, animates it, cuts it to the beat, checks every frame, and hands you an MP4 you can keep editing. People wrote the recipes. Claude selects. The repo animates with Remotion. In my own reels the renderer is HyperFrames, and the recipe library is the part worth reading either way.
@@ -238,6 +258,8 @@ A single reel rarely uses more than three of these. The point of knowing all ten
 ---
 
 ## 4. The starter file
+
+<p align="center"><img src="assets/one-file-scene.jpg" alt="The one-file scene rendered: five bars rising on a dark floor, the last one glowing orange, a chrome sphere reflecting the room, bloom on" width="100%"></p>
 
 [`templates/one-file-scene.html`](templates/one-file-scene.html) is one HTML file, no build step, that renders a chart as a scene. Open it in Chrome and it animates. It has:
 
